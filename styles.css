@@ -3,12 +3,11 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     /* Evita desplazamiento si el video es más grande */
 }
 
 .video-fondo {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -39,6 +38,7 @@ a:hover {
     color: #fff;
     text-align: center;
     background: rgba(0, 0, 0, 0.337);
+    overflow: hidden;
 }
 
 
@@ -128,10 +128,7 @@ a:hover {
     font-weight: 500;
 }
 
-
-
-
-#principal {
+.content {
     transform: scale(0);
     opacity: 0;
     animation: zoomFadeIn 2s forwards;
@@ -255,4 +252,7 @@ a:hover {
 .navbar .dropdown:hover .dropdown-content {
     display: block;
     height: auto; 
+}
+section{
+    min-height: 100vh;
 }
