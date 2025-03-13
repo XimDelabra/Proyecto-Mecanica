@@ -256,3 +256,14 @@ a:hover {
 section{
     min-height: 100vh;
 }
+.whatis{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.texto{
+    width: 50%;
+}
+.imagen{
+    width: 50%;
+}
