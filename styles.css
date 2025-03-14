@@ -267,3 +267,24 @@ section{
 .imagen{
     width: 50%;
 }
+
+.carousel-inner  {
+    width: 900px;
+    margin-left: 20%;
+}
+
+/* Cambiar el color de los íconos a negro */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(100%); /* Convierte el color blanco por defecto a negro */
+}
+
+/* Opcional: Cambiar el fondo de los botones a negro */
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: rgba(114, 113, 113, 0.5); /* Ajusta la opacidad si lo deseas */
+    margin: 25%;
+    border-radius: 50%; /* Hace los botones más estilizados */
+    width: 50px;
+    height: 50px;
+}
