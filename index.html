@@ -12,10 +12,10 @@
 </head>
 
 <body>
-    <nav class="navbar">
+    <nav class="navbar1">
         <div class="nav-left">
             <div class="dropdown-container"></div>
-            <div class="dropdown">
+            <div class="dropdown1">
                 <button class="dropbtn">☰ Menu
                     <i class="fa fa-caret-down"></i>
                 </button>
@@ -153,6 +153,26 @@
             const video = document.querySelector(".video-fondo");
             video.playbackRate = 0.7; // Ajusta la velocidad (1 = normal, 0.5 = más lento, 2 = más rápido)
         });
+        document.addEventListener("DOMContentLoaded", function () {
+    let lastScrollTop = 0;
+    const navbar = document.querySelector(".navbar1");
+
+    window.addEventListener("scroll", function () {
+        let currentScroll = window.scrollY;
+
+        if (currentScroll > lastScrollTop) {
+            // En lugar de ocultar completamente, reducir el tamaño
+            navbar.style.opacity = "0"; // Solo se hace invisible, pero sigue en su lugar
+            navbar.style.pointerEvents = "none"; // No bloquea clics
+        } else {
+            // Mostrar nuevamente cuando se hace scroll arriba
+            navbar.style.opacity = "1";
+            navbar.style.pointerEvents = "auto";
+        }
+        lastScrollTop = currentScroll;
+    });
+});
+
     </script>
 
 </body>
