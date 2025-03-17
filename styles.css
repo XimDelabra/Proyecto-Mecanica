@@ -256,18 +256,44 @@ a:hover {
 section{
     min-height: 100vh;
 }
-.whatis{
-    display:flex;
-    justify-content: space-between;
+
+.whatis {
+    display: flex;
     align-items: center;
-}
-.texto{
-    width: 50%;
-}
-.imagen{
-    width: 50%;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
 }
 
+.texto {
+    width: 50%;
+    padding: 20px;
+    text-align: justify;
+}
+
+.texto h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+
+.texto p {
+    font-size: 20px;
+    color: #333;
+}
+
+.imagen {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.imagen img {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 5px;
+}
 .carousel-inner  {
     width: 900px;
     margin-left: 20%;
