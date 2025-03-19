@@ -642,5 +642,11 @@ section{
 #background-container {
     background: url('images/aboutus3.jpg') no-repeat center center fixed;
     background-size: cover; 
-    padding-bottom: 50px; 
+    padding-bottom: 0px; 
+    margin-bottom: 0
+}
+
+footer {
+    background-color: rgba(19, 19, 19, 0.849);
+    border-top: #c5c5c564 solid 1px;
 }
