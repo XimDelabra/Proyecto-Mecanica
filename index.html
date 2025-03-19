@@ -15,7 +15,7 @@
 <body>
     <nav class="navbar1">
         <div class="nav-left">
-            <div class="dropdown-container"></div>
+
             <div class="dropdown1">
                 <button class="dropbtn">☰ Menu
                     <i class="fa fa-caret-down"></i>
@@ -27,7 +27,7 @@
                 </div>
             </div>
         </div>
-        </div>
+
 
         <a href="#" class="logo">Virtual Factory</a>
 
@@ -51,6 +51,15 @@
             <button>DOWNLOAD</button>
         </div>
     </section>
+    <section id="background-container">
+        <section id="aboutus" class="aboutUsContainer">
+            <div class="content">
+                <h1 class="aboutUsTitle">About Us</h1>
+                <p class="aboutUsText">Virtual Factory is an innovative platform designed to revolutionize the way
+                    virtual
+                    environments are created and tested. Our goal is to provide a seamless, highly interactive
+                    experience
+                    that allows users to explore, simulate, and refine their projects in a controlled virtual space.</p>
 
     <section id="aboutus" class="aboutUsContainer">
         <div class="content">
@@ -108,159 +117,142 @@
     </section>
     
 
-    <section class="whatis" id="whatis">
-        <div class="imagen">
-            <h1>¿En qué consiste?</h1>
-            <div class="flip-container">
-                <div class="front">
-                    <img src="images/whatis.jpg" alt="Imagen de entorno industrial">
-                </div>
-                <div class="back">
-                    <p>Permitirá a los trabajadores explorar entornos industriales en un mundo virtual interactivo,
-                        donde pueden visualizar piezas en 3D, comprender procesos complejos y entrenarse en el manejo de
-                        maquinaria sin riesgos.</p>
+
+        <section class="whatis" id="whatis">
+            <div class="imagen">
+                <h1>¿En qué consiste?</h1>
+                <div class="flip-container">
+                    <div class="front">
+                        <img src="images/whatis.jpg" alt="Imagen de entorno industrial">
+                    </div>
+                    <div class="back">
+                        <p>Permitirá a los trabajadores explorar entornos industriales en un mundo virtual interactivo,
+                            donde pueden visualizar piezas en 3D, comprender procesos complejos y entrenarse en el
+                            manejo de
+                            maquinaria sin riesgos.</p>
+                        <img src="images/pieza 3d.png" alt="">
+
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="preview">
-        <h1>Preview</h1>
-        <p>Aqui se muestra como se ve el juego ya en acción</p>
-        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="images/img1.jpg" class="d-block w-100" alt="image1">
+
+        <section id="preview">
+            <h1>Preview</h1>
+            <p>Aqui se muestra como se ve el juego ya en acción</p>
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/img1.jpg" class="d-block w-100" alt="image1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/img2.jpg" class="d-block w-100" alt="image2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/img3.jpg" class="d-block w-100" alt="image3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/img4.jpg" class="d-block w-100" alt="image4">
+                    </div>
+                    <div class="carousel-item">
+                        <video id="carouselVideo" class="d-block w-100" controls>
+                            <source src="videos/gameplay.mp4" type="video/mp4">
+                            Tu navegador no soporta el elemento de video.
+                        </video>
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="images/img2.jpg" class="d-block w-100" alt="image2">
-                </div>
-                <div class="carousel-item">
-                    <img src="images/img3.jpg" class="d-block w-100" alt="image3">
-                </div>
-                <div class="carousel-item">
-                    <img src="images/img4.jpg" class="d-block w-100" alt="image4">
-                </div>
-                <div class="carousel-item">
-                    <video id="carouselVideo" class="d-block w-100" controls>
-                        <source src="videos/gameplay.mp4" type="video/mp4">
-                        Tu navegador no soporta el elemento de video.
-                    </video>
-                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
+        </section>
 
-        <!-- JavaScript para pausar el video al cambiar de slide -->
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const carousel = document.querySelector('#carouselExample');
-                const video = document.querySelector('#carouselVideo');
+        <section id="tutorial">
+            <h1>Tutorial</h1><br>
+            <p>Aqui un pequeño gameplay de como usar este juego </p>
+            <video src="videos/tutorial.mp4" controls height="450px" width="250px"></video>
+        </section>
 
-                carousel.addEventListener('slide.bs.carousel', function (event) {
-                    // Verifica si el slide que sale contiene el video y lo pausa
-                    if (event.relatedTarget.querySelector('video') === null) {
-                        video.pause();
-                    }
-                });
-
-                // Opcional: reproducir automáticamente si vuelves al slide del video
-                carousel.addEventListener('slid.bs.carousel', function (event) {
-                    if (event.relatedTarget.querySelector('video') !== null) {
-                        video.play();
-                    }
-                });
-            });
-        </script>
-
-    </section>
-
-    <section id="tutorial">
-        <h1>Tutorial</h1><br>
-        <p>Aqui un pequeño gameplay de como usar este juego </p>
-        <video src="videos/tutorial.mp4" controls height="450px" width="250px"></video>
-    </section>
-
-    <section id="collaborators">
-        <div class="container">
-            <h1 class="text-center">Collaborators</h1>
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="card-client" data-email="ximena.aledel@gmail.com">
-                        <div class="user-picture">
-                            <img src="images/xim1.jpg" alt="Collaborator 1">
-                        </div>
-                        <p class="name-client">Ximena Delabra Castillo
-                            <span>Desarrollador de software</span>
-                        </p>
-                        <div class="social-media">
-                            <a href="https://www.linkedin.com/in/ximenadelabra/" target="_blank"><i
-                                    class="bi bi-linkedin"></i></a>
-                            <a href="https://github.com/XimDelabra" target="_blank"><i class="bi bi-github"></i></a>
-                            <a href="#" onclick="copyEmail(event)"><i class="bi bi-envelope-fill"></i></a>
-                            <div class="tooltip">Correo copiado</div>
+        <section id="collaborators">
+            <div class="container">
+                <h1 class="text-center">Collaborators</h1>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card-client" data-email="ximena.aledel@gmail.com">
+                            <div class="user-picture">
+                                <img src="images/xim1.jpg" alt="Collaborator 1">
+                            </div>
+                            <p class="name-client">Ximena Delabra Castillo
+                                <span>Desarrollador de software</span>
+                            </p>
+                            <div class="social-media">
+                                <a href="https://www.linkedin.com/in/ximenadelabra/" target="_blank"><i
+                                        class="bi bi-linkedin"></i></a>
+                                <a href="https://github.com/XimDelabra" target="_blank"><i class="bi bi-github"></i></a>
+                                <a href="#" onclick="copyEmail(event)"><i class="bi bi-envelope-fill"></i></a>
+                                <div class="tooltip">Correo copiado</div>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-md-3">
-                    <div class="card-client" data-email="ximena.aledel@gmail.com">
-                        <div class="user-picture">
-                            <img src="" alt="Collaborator 1">
-                        </div>
-                        <p class="name-client">Eduardo González López
-                            <span>Desarrollador de software</span>
-                        </p>
-                        <div class="social-media">
-                            <a href="https://github.com/Eduardo-L5" target="_blank"><i class="bi bi-github"></i></a>
-                            <a href="#" onclick="copyEmail(event)"><i class="bi bi-envelope-fill"></i></a>
-                            <div class="tooltip">Correo copiado</div>
+                    <div class="col-md-3">
+                        <div class="card-client" data-email="ximena.aledel@gmail.com">
+                            <div class="user-picture">
+                                <img src="" alt="Collaborator 1">
+                            </div>
+                            <p class="name-client">Eduardo González López
+                                <span>Desarrollador de software</span>
+                            </p>
+                            <div class="social-media">
+                                <a href="https://github.com/Eduardo-L5" target="_blank"><i class="bi bi-github"></i></a>
+                                <a href="#" onclick="copyEmail(event)"><i class="bi bi-envelope-fill"></i></a>
+                                <div class="tooltip">Correo copiado</div>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-md-3">
-                    <div class="card-client" data-email="rauldejesusmartinezcortez9@gmail.com">
-                        <div class="user-picture">
-                            <img src="images/raul.jpg" alt="Collaborator 3">
-                        </div>
-                        <p class="name-client">Raul De Jesus Martinez Cortez
-                            <span>Desarrollador de software</span>
-                        </p>
-                        <div class="social-media">
-                            <a href="https://github.com/animecrex"><i class="bi bi-github"></i></a>
-                            <a href="#" onclick="copyEmail(event)"><i
-                                    class="bi bi-envelope-fill"></i></a>
-                            <div class="tooltip">Correo copiado</div>
+                    <div class="col-md-3">
+                        <div class="card-client" data-email="rauldejesusmartinezcortez9@gmail.com">
+                            <div class="user-picture">
+                                <img src="images/raul.jpg" alt="Collaborator 3">
+                            </div>
+                            <p class="name-client">Raul De Jesus Martinez Cortez
+                                <span>Desarrollador de software</span>
+                            </p>
+                            <div class="social-media">
+                                <a href="https://github.com/animecrex"><i class="bi bi-github"></i></a>
+                                <a href="#" onclick="copyEmail(event)"><i class="bi bi-envelope-fill"></i></a>
+                                <div class="tooltip">Correo copiado</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card-client" data-email="molinavkaroll@gmail.com">
-                        <div class="user-picture">
-                            <img src="images/karoll.jpeg" alt="Collaborator 4">
-                        </div>
-                        <p class="name-client">Karoll Molina Valadez
-                            <span>Desarrollador de software</span>
-                        </p>
-                        <div class="social-media">
-                            <a href="#" onclick="copyEmail(event)"><i class="bi bi-envelope-fill"></i></a>
-                            <div class="tooltip">Correo copiado</div>
+                    <div class="col-md-3">
+                        <div class="card-client" data-email="molinavkaroll@gmail.com">
+                            <div class="user-picture">
+                                <img src="images/karoll.jpeg" alt="Collaborator 4">
+                            </div>
+                            <p class="name-client">Karoll Molina Valadez
+                                <span>Desarrollador de software</span>
+                            </p>
+                            <div class="social-media">
+                                <a href="#" onclick="copyEmail(event)"><i class="bi bi-envelope-fill"></i></a>
+                                <div class="tooltip">Correo copiado</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
     </section>
-
-
     <footer class="bg-dark text-light pt-5 pb-4">
         <div class="container">
             <div class="row text-center text-md-start">
@@ -293,7 +285,8 @@
                     <h5 class="fw-bold">Información</h5>
                     <ul class="list-unstyled">
                         <li><a href="#" class="text-light text-decoration-none footer-link">Términos de Uso</a></li>
-                        <li><a href="#" class="text-light text-decoration-none footer-link">Política de Privacidad</a>
+                        <li><a href="#" class="text-light text-decoration-none footer-link">Política de
+                                Privacidad</a>
                         </li>
                     </ul>
                 </div>
@@ -322,82 +315,7 @@
             </div>
         </div>
     </footer>
-
-
-
-
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const video = document.querySelector(".video-fondo");
-            video.playbackRate = 0.7; // Ajusta la velocidad (1 = normal, 0.5 = más lento, 2 = más rápido)
-        });
-        document.addEventListener("DOMContentLoaded", function () {
-            let lastScrollTop = 0;
-            const navbar = document.querySelector(".navbar1");
-
-            window.addEventListener("scroll", function () {
-                let currentScroll = window.scrollY;
-
-                if (currentScroll > lastScrollTop) {
-
-                    navbar.style.opacity = "0"; // Solo se hace invisible, pero sigue en su lugar
-                    navbar.style.pointerEvents = "none"; // No bloquea clics
-                } else {
-                    // Mostrar nuevamente cuando se hace scroll arriba
-                    navbar.style.opacity = "1";
-                    navbar.style.pointerEvents = "auto";
-                }
-                lastScrollTop = currentScroll;
-            });
-        });
-
-    function copyEmail(event) {
-        event.preventDefault();
-    
-        let card = event.target.closest('.card-client');
-        
-        // Obtiene el email del data-email
-        let email = card.getAttribute('data-email');
-        
-        // Copia el email al portapapeles
-        navigator.clipboard.writeText(email).then(() => {
-            // muestra el tooltip
-            let tooltip = card.querySelector('.tooltip');
-            tooltip.style.visibility = 'visible';
-            tooltip.style.opacity = '1';
-
-            // Oculta el tooltip
-            setTimeout(() => {
-                tooltip.style.visibility = 'hidden';
-                tooltip.style.opacity = '0';
-            }, 2000);
-        });
-    }
-
-
-        document.addEventListener("DOMContentLoaded", function () {
-            const aboutUsVideo = document.querySelector(".video-aboutus");
-            if (aboutUsVideo) {
-                aboutUsVideo.playbackRate = 0.7;
-            }
-        });
-
-        document.addEventListener("DOMContentLoaded", function () {
-            function revealOnScroll() {
-                const aboutUsSection = document.querySelector(".aboutUsContainer");
-                const sectionPosition = aboutUsSection.getBoundingClientRect().top;
-                const screenPosition = window.innerHeight / 1.5;
-
-                if (sectionPosition < screenPosition) {
-                    aboutUsSection.classList.add("visible");
-                }
-            }
-
-            window.addEventListener("scroll", revealOnScroll);
-        });
-    </script>   
-
+    <script src="estilos.js"></script>
 </body>
 
 </html>
