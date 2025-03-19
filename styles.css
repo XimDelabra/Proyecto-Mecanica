@@ -544,12 +544,6 @@ section{
     padding-bottom: 50px; 
 }
 
-
-
-#aboutus, #whatis, #tutorial, #preview, #collaborators {
-    padding-top: 100px; 
-}
-
 .flip-card-front {
     background: rgba(142, 45, 226, 0.17);
     color: white;
@@ -652,6 +646,16 @@ footer {
 }
 #aboutus, #whatis, #tutorial, #preview, #collaborators {
     box-shadow: 4px 4px 18px rgba(108, 108, 108, 0.541);
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 100px; 
+    padding-bottom: 50px;
+}
+#preview p, #tutorial p{
+    font-size: 1.5rem;
+    color: white;
+    margin: 20px 0;
+}
+#preview h1, #tutorial h1{
+    font-size: 3rem;
+    color: white;
+    margin: 20px 0;
 }
