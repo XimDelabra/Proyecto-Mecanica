@@ -55,18 +55,55 @@
     <section id="aboutus" class="aboutUsContainer">
         <div class="content">
             <h1 class="aboutUsTitle">About Us</h1>
-            <p class="aboutUsText">Virtual Factory is an innovative platform designed to revolutionize the way virtual environments are created and tested. Our goal is to provide a seamless, highly interactive experience that allows users to explore, simulate, and refine their projects in a controlled virtual space.</p>
+            <section id="cards-section">
+                <div class="cards-container">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h1>Visión</h1>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>Desarrollar un entorno virtual interactivo en 3D que permita la capacitación, integrando una vista 2D para el análisis detallado.</p>
+                            </div>
+                        </div>
+                    </div>
             
-            <p class="aboutUsText">With cutting-edge technology and an intuitive interface, Virtual Factory is the perfect tool for developers, designers, and engineers looking to bring their ideas to life. Whether you are working on industrial simulations</p>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/aboutus1.jpeg" alt="Estructura">
+                            </div>
+                            <div class="flip-card-back">
+                                <p>Un vistazo a la estructura interna de nuestra plataforma.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/aboutus2.jpeg" alt="Estructura">
+                            </div>
+                            <div class="flip-card-back">
+                                <p>Serás un personaje inmerso en la empresa. ¿Listo para descubrir lo que te rodea?</p>
+                            </div>
+                        </div>
+                    </div>
             
-            <div class="aboutUsImages">
-                <img src="images/aboutus1.jpeg" alt="Project Preview 1" class="aboutUsImage">
-                <img src="images/aboutus2.jpeg" alt="Project Preview 2" class="aboutUsImage">
-            </div>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h1>Misión</h1>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>Creación de una representación en 3D de una planta industrial que fabrica piezas mecánicas, con el propósito de poder observar un troquel mecánico</p>
+                            </div>
+                        </div>
+                    </div>
             
-            <p class="aboutUsText">Our team is committed to pushing the boundaries of innovation, ensuring that Virtual Factory remains at the forefront of technological advancement. Join us on this journey as we redefine the future of virtual development.</p>
-            
-            <button class="buttonAboutUsTutorial" onclick="window.location.href='#tutorial'">Learn More</button>
+                </div>
+            </section>                 
+            <button class="buttonAboutUsTutorial" onclick="window.location.href='#tutorial'">Ir al tutorial</button>
         </div>
     </section>
     
@@ -346,10 +383,20 @@
             }
         });
 
+        document.addEventListener("DOMContentLoaded", function () {
+            function revealOnScroll() {
+                const aboutUsSection = document.querySelector(".aboutUsContainer");
+                const sectionPosition = aboutUsSection.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.5;
 
-    </script>
+                if (sectionPosition < screenPosition) {
+                    aboutUsSection.classList.add("visible");
+                }
+            }
 
-    
+            window.addEventListener("scroll", revealOnScroll);
+        });
+    </script>   
 
 </body>
 
