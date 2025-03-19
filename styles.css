@@ -471,8 +471,6 @@ section{
     100% { opacity: 1; transform: translateY(0); }
 }
 
-
-
 .aboutUsContainer {
     position: relative;
     width: 100%;
@@ -482,8 +480,7 @@ section{
     justify-content: center;
     text-align: center;
     padding: 50px 20px;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/aboutus3.jpg');
-    background-size: cover;
+    background: none;
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 2s ease-out, transform 2s ease-out;
@@ -494,13 +491,11 @@ section{
     transform: translateY(0);
 }
 
-
 #cards-section {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 60vh;
-    background: url('images/fondo_cards.jpg') no-repeat center center;
     background-size: cover;
     padding: 30px 10px;
 }
@@ -546,8 +541,6 @@ section{
     background-size: cover; 
 }
 #background-container {
-    background: url('images/aboutus3.jpg') no-repeat center center fixed;
-    background-size: cover; 
     padding-bottom: 50px; 
 }
 
@@ -562,7 +555,6 @@ section{
 #aboutus, #whatis, #tutorial, #preview, #collaborators {
     padding-top: 100px; 
 }
-
 
 .flip-card-front {
     background: rgba(142, 45, 226, 0.17);
