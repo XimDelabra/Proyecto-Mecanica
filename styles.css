@@ -263,16 +263,17 @@ section{
     align-items: center;
     justify-content: center;
     padding: 20px;
-    height: 100vh; 
+    height: 100vh;
     position: relative;
-    background: url('images/verde2.jpg');
+    width: 100%; 
 }
 
 .imagen {
-    width: 100%; 
+    width: 70%; 
     height: 70vh; 
     position: relative;
-    perspective: 1200px; 
+    perspective: 1200px;
+    margin: auto; 
 }
 
 .flip-container {
@@ -280,11 +281,11 @@ section{
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 0.6s;
+    transition: transform 0.6s ease-in-out; 
 }
 
 .imagen:hover .flip-container {
-    transform: rotateY(180deg); 
+    transform: rotateY(180deg);
 }
 
 .front, .back {
@@ -292,41 +293,51 @@ section{
     height: 100%;
     position: absolute;
     backface-visibility: hidden;
-    border-radius: 10px; 
+    border-radius: 10px;
     overflow: hidden;
 }
 
 .front img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
+}
+.back img {
+    max-width: 30%; 
+    object-fit: contain; 
+    margin-top: 20px; 
 }
 
 .back {
-    background-color: #000;
+    background-color: #0000002b;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column; 
     padding: 20px;
     font-size: 1.5rem;
     text-align: center;
     transform: rotateY(180deg);
-    
+    overflow: hidden; 
 }
+
 .whatis h1 {
-    font-size: 3rem; 
-    font-weight: bold; 
-    text-align: center; 
+    font-size: 2.5rem; 
+    font-weight: bold;
+    text-align: center;
     color: #0033cc;
+    margin-bottom: 20px;
 }
+
 .back p {
-    font-size: 40px;
+    font-size: 1.5rem;
     font-weight: 500;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
     max-width: 80%;
-    margin: auto;
+    margin: 10px auto; 
 }
+
 
 .carousel-inner  {
     width: 900px;
@@ -335,7 +346,6 @@ section{
 
 #preview{
     text-align: center;
-    background-image: url('images/morado_azul.jpg');
     color: white;
 }
 
@@ -357,7 +367,6 @@ section{
 }
 
 #collaborators {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/verde2.jpg');
     background-size: cover;
     background-position: center;
     padding: 60px 0;
@@ -423,7 +432,6 @@ section{
 
 #tutorial {
     text-align: center;
-    background-image: url('images/circulo_azul.jpg');
     color: white;
 }
 
@@ -509,7 +517,27 @@ section{
     justify-content: center;
     text-align: center;
     padding: 50px 20px;
-    background: url('images/aboutus3.jpg') no-repeat center center;
     background-size: cover; 
+}
+#background-container {
+    background: url('images/aboutus3.jpg') no-repeat center center fixed;
+    background-size: cover; /* Asegura que la imagen cubra toda la altura */
+    padding-bottom: 50px; /* Espacio para no quedar pegado al contenido */
+}
+
+#aboutus, #whatis {
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté por encima del fondo */
+    background-color: rgba(0, 0, 0, 0.5); /* Da algo de contraste al texto sobre la imagen de fondo */
+    padding: 40px 20px;
+    color: white; /* Asegura que el texto se vea bien sobre el fondo */
+}
+
+#aboutus {
+    padding-top: 100px; /* Espacio superior para dar un margen */
+}
+
+.whatis {
+    padding-top: 80px; /* Espacio superior para dar un margen */
 }
 
