@@ -299,6 +299,10 @@ section{
     margin-left: 20%;
 }
 
+#preview{
+    text-align: center;
+}
+
 /* Cambiar el color de los íconos a negro */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -379,4 +383,8 @@ section{
 }
 .show-tooltip {
     opacity: 1;
+}
+
+#tutorial {
+    text-align: center;
 }
