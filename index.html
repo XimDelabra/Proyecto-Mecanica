@@ -168,7 +168,7 @@
                                     class="bi bi-linkedin"></i></a>
                             <a href="https://github.com/XimDelabra" target="_blank"><i class="bi bi-github"></i></a>
                             <a href="#" onclick="copyEmail(event)"><i class="bi bi-envelope-fill"></i></a>
-                            <div class="tooltip" id="tooltip">Correo copiado</div>
+                            <div class="tooltip">Correo copiado</div>
                         </div>
                     </div>
                 </div>
@@ -184,13 +184,13 @@
                         <div class="social-media">
                             <a href="https://github.com/Eduardo-L5" target="_blank"><i class="bi bi-github"></i></a>
                             <a href="#" onclick="copyEmail(event)"><i class="bi bi-envelope-fill"></i></a>
-                            <div class="tooltip" id="tooltip">Correo copiado</div>
+                            <div class="tooltip">Correo copiado</div>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-3">
-                    <div class="card-client">
+                    <div class="card-client" data-email="rauldejesusmartinezcortez9@gmail.com">
                         <div class="user-picture">
                             <img src="images/raul.jpg" alt="Collaborator 3">
                         </div>
@@ -199,9 +199,9 @@
                         </p>
                         <div class="social-media">
                             <a href="https://github.com/animecrex"><i class="bi bi-github"></i></a>
-                            <a href="rauldejesusmartinezcortez9@gmail.com" onclick="copyEmail(event)"><i
+                            <a href="#" onclick="copyEmail(event)"><i
                                     class="bi bi-envelope-fill"></i></a>
-                            <div class="tooltip" id="tooltip">Correo copiado</div>
+                            <div class="tooltip">Correo copiado</div>
                         </div>
                     </div>
                 </div>
@@ -215,7 +215,7 @@
                         </p>
                         <div class="social-media">
                             <a href="#" onclick="copyEmail(event)"><i class="bi bi-envelope-fill"></i></a>
-                            <div class="tooltip" id="tooltip">Correo copiado</div>
+                            <div class="tooltip">Correo copiado</div>
                         </div>
                     </div>
                 </div>
@@ -315,28 +315,29 @@
             });
         });
 
-        function copyEmail(event) {
-            event.preventDefault();
+    function copyEmail(event) {
+        event.preventDefault();
+    
+        let card = event.target.closest('.card-client');
+        
+        // Obtiene el email del data-email
+        let email = card.getAttribute('data-email');
+        
+        // Copia el email al portapapeles
+        navigator.clipboard.writeText(email).then(() => {
+            // muestra el tooltip
+            let tooltip = card.querySelector('.tooltip');
+            tooltip.style.visibility = 'visible';
+            tooltip.style.opacity = '1';
 
-            // Obtiene el correo de la card que fue clickeada
-            const card = event.target.closest('.card-client');
-            const email = card ? card.getAttribute('data-email') : '';
+            // Oculta el tooltip
+            setTimeout(() => {
+                tooltip.style.visibility = 'hidden';
+                tooltip.style.opacity = '0';
+            }, 2000);
+        });
+    }
 
-            if (email) {
-                // Copia el correo al portapapeles
-                navigator.clipboard.writeText(email).then(() => {
-                    // Muestra mensaje
-                    const tooltip = document.getElementById("tooltip");
-                    tooltip.classList.add("show-tooltip");
-
-                    setTimeout(() => {
-                        tooltip.classList.remove("show-tooltip");
-                    }, 2000);
-                }).catch(err => {
-                    console.error("Error al copiar: ", err);
-                });
-            }
-        }
 
         document.addEventListener("DOMContentLoaded", function () {
             const aboutUsVideo = document.querySelector(".video-aboutus");
