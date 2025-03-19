@@ -335,6 +335,8 @@ section{
 
 #preview{
     text-align: center;
+    background-image: url('images/morado_azul.jpg');
+    color: white;
 }
 
 /* Cambiar el color de los íconos a negro */
@@ -421,6 +423,8 @@ section{
 
 #tutorial {
     text-align: center;
+    background-image: url('images/circulo_azul.jpg');
+    color: white;
 }
 
 .aboutUsTitle {
