@@ -253,6 +253,12 @@ a:hover {
     display: block;
     height: auto; 
 }
+
+.navbar1.scrolled {
+    background-color: rgba(0, 0, 0, 0.295); 
+    transition: background-color 0.3s ease; 
+}
+
 section{
     min-height: 100vh;
 }
@@ -521,23 +527,20 @@ section{
 }
 #background-container {
     background: url('images/aboutus3.jpg') no-repeat center center fixed;
-    background-size: cover; /* Asegura que la imagen cubra toda la altura */
-    padding-bottom: 50px; /* Espacio para no quedar pegado al contenido */
+    background-size: cover; 
+    padding-bottom: 50px; 
 }
 
 #aboutus, #whatis {
     position: relative;
-    z-index: 1; /* Asegura que el contenido esté por encima del fondo */
-    background-color: rgba(0, 0, 0, 0.5); /* Da algo de contraste al texto sobre la imagen de fondo */
+    z-index: 1; 
+    background-color: rgba(0, 0, 0, 0.5); 
     padding: 40px 20px;
-    color: white; /* Asegura que el texto se vea bien sobre el fondo */
+    color: white; 
 }
 
-#aboutus {
-    padding-top: 100px; /* Espacio superior para dar un margen */
+#aboutus, #whatis, #tutorial, #preview, #collaborators {
+    padding-top: 100px; 
 }
 
-.whatis {
-    padding-top: 80px; /* Espacio superior para dar un margen */
-}
 
