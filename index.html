@@ -21,7 +21,7 @@
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                    <a href="#aboutUs">About Us</a>
+                    <a href="#aboutus">About Us</a>
                     <a href="#collaborators">Collaborators </a>
                     <a href="#contact">Contact </a>
                 </div>
@@ -52,11 +52,24 @@
         </div>
     </section>
 
-    <section id="aboutus">
-        <h1>About us</h1>
-        <p>This is Aboutus</p>
-
+    <section id="aboutus" class="aboutUsContainer">
+        <div class="content">
+            <h1 class="aboutUsTitle">About Us</h1>
+            <p class="aboutUsText">Virtual Factory is an innovative platform designed to revolutionize the way virtual environments are created and tested. Our goal is to provide a seamless, highly interactive experience that allows users to explore, simulate, and refine their projects in a controlled virtual space.</p>
+            
+            <p class="aboutUsText">With cutting-edge technology and an intuitive interface, Virtual Factory is the perfect tool for developers, designers, and engineers looking to bring their ideas to life. Whether you are working on industrial simulations</p>
+            
+            <div class="aboutUsImages">
+                <img src="images/aboutus1.jpeg" alt="Project Preview 1" class="aboutUsImage">
+                <img src="images/aboutus2.jpeg" alt="Project Preview 2" class="aboutUsImage">
+            </div>
+            
+            <p class="aboutUsText">Our team is committed to pushing the boundaries of innovation, ensuring that Virtual Factory remains at the forefront of technological advancement. Join us on this journey as we redefine the future of virtual development.</p>
+            
+            <button class="buttonAboutUsTutorial" onclick="window.location.href='#tutorial'">Learn More</button>
+        </div>
     </section>
+    
 
     <section class="whatis" id="whatis">
         <div class="imagen">
@@ -148,7 +161,7 @@
                             <img src="images/xim1.jpg" alt="Collaborator 1">
                         </div>
                         <p class="name-client">Ximena Delabra Castillo
-                            <span>Dessarrollo de Software</span>
+                            <span>Desarrollador de software</span>
                         </p>
                         <div class="social-media">
                             <a href="https://www.linkedin.com/in/ximenadelabra/" target="_blank"><i
@@ -183,7 +196,7 @@
                             <img src="images/raul.jpg" alt="Collaborator 3">
                         </div>
                         <p class="name-client">Raul De Jesus Martinez Cortez
-                            <span>Dessarrollador de Software</span>
+                            <span>Desarrollador de software</span>
                         </p>
                         <div class="social-media">
                             <a href="https://github.com/animecrex"><i class="bi bi-github"></i></a>
@@ -194,16 +207,14 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="card-client">
+                    <div class="card-client" data-email="molinavkaroll@gmail.com">
                         <div class="user-picture">
-                            <img src="images/collaborator4.jpg" alt="Collaborator 4">
+                            <img src="images/karoll.jpeg" alt="Collaborator 4">
                         </div>
-                        <p class="name-client">Nombre 4
-                            <span>Puesto</span>
+                        <p class="name-client">Karoll Molina Valadez
+                            <span>Desarrollador de software</span>
                         </p>
                         <div class="social-media">
-                            <a href="#"><i class="bi bi-linkedin"></i></a>
-                            <a href="#"><i class="bi bi-github"></i></a>
                             <a href="#" onclick="copyEmail(event)"><i class="bi bi-envelope-fill"></i></a>
                             <div class="tooltip" id="tooltip">Correo copiado</div>
                         </div>
@@ -328,7 +339,17 @@
             }
         }
 
+        document.addEventListener("DOMContentLoaded", function () {
+            const aboutUsVideo = document.querySelector(".video-aboutus");
+            if (aboutUsVideo) {
+                aboutUsVideo.playbackRate = 0.7;
+            }
+        });
+
+
     </script>
+
+    
 
 </body>
 
