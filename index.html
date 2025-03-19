@@ -59,20 +59,20 @@
     </section>
 
     <section class="whatis" id="whatis">
-        <div class="texto">
-            <h2>What Is</h2>
-            <p>
-                Permitirá a los trabajadores explorar entornos industriales en un mundo virtual interactivo, donde
-                pueden visualizar piezas en 3D, comprender procesos complejos y entrenarse en el manejo de maquinaria
-                sin riesgos.
-            </p>
-        </div>
         <div class="imagen">
-            <img src="images/whatis.jpg" alt="Imagen de entorno industrial">
+            <h1>¿En qué consiste?</h1>
+            <div class="flip-container">
+                <div class="front">
+                    <img src="images/whatis.jpg" alt="Imagen de entorno industrial">
+                </div>
+                <div class="back">
+                    <p>Permitirá a los trabajadores explorar entornos industriales en un mundo virtual interactivo,
+                        donde pueden visualizar piezas en 3D, comprender procesos complejos y entrenarse en el manejo de
+                        maquinaria sin riesgos.</p>
+                </div>
+            </div>
         </div>
     </section>
-
-
 
     <section id="preview">
         <h1>Preview</h1>
@@ -92,7 +92,7 @@
                     <img src="images/img4.jpg" class="d-block w-100" alt="image4">
                 </div>
                 <div class="carousel-item">
-                    <video id="carouselVideo" class="d-block w-100"  controls>
+                    <video id="carouselVideo" class="d-block w-100" controls>
                         <source src="videos/gameplay.mp4" type="video/mp4">
                         Tu navegador no soporta el elemento de video.
                     </video>
@@ -107,20 +107,20 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-        
+
         <!-- JavaScript para pausar el video al cambiar de slide -->
         <script>
             document.addEventListener('DOMContentLoaded', function () {
                 const carousel = document.querySelector('#carouselExample');
                 const video = document.querySelector('#carouselVideo');
-        
+
                 carousel.addEventListener('slide.bs.carousel', function (event) {
                     // Verifica si el slide que sale contiene el video y lo pausa
                     if (event.relatedTarget.querySelector('video') === null) {
                         video.pause();
                     }
                 });
-        
+
                 // Opcional: reproducir automáticamente si vuelves al slide del video
                 carousel.addEventListener('slid.bs.carousel', function (event) {
                     if (event.relatedTarget.querySelector('video') !== null) {
@@ -129,14 +129,14 @@
                 });
             });
         </script>
-        
+
     </section>
 
-<section id="tutorial">
-<h1>Tutorial</h1><br>
-<p>Aqui un pequeño gameplay de como usar este juego </p>
-<video src="videos/tutorial.mp4" controls height="450px" width="250px"></video>
-</section>
+    <section id="tutorial">
+        <h1>Tutorial</h1><br>
+        <p>Aqui un pequeño gameplay de como usar este juego </p>
+        <video src="videos/tutorial.mp4" controls height="450px" width="250px"></video>
+    </section>
 
     <section id="collaborators">
         <div class="container">
@@ -187,7 +187,8 @@
                         </p>
                         <div class="social-media">
                             <a href="https://github.com/animecrex"><i class="bi bi-github"></i></a>
-                            <a href="rauldejesusmartinezcortez9@gmail.com" onclick="copyEmail(event)"><i class="bi bi-envelope-fill"></i></a>
+                            <a href="rauldejesusmartinezcortez9@gmail.com" onclick="copyEmail(event)"><i
+                                    class="bi bi-envelope-fill"></i></a>
                             <div class="tooltip" id="tooltip">Correo copiado</div>
                         </div>
                     </div>
