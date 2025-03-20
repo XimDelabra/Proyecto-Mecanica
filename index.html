@@ -15,30 +15,47 @@
 </head>
 
 <body>
-    <nav class="navbar1">
+    <nav class="navbar1" id="big-nav">
         <div class="nav-left">
-
             <div class="dropdown1">
-                <button class="dropbtn">☰ Menu
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
+                <button class="dropbtn" onclick="toggleMenu()">☰ Menu</button>
+                <div class="dropdown-content" id="dropdownMenu">
                     <a href="#aboutus">Sobre Nosotros</a>
-                    <a href="#collaborators">Colaboradores </a>
+                    <a href="#collaborators">Colaboradores</a>
                     <a href="#contact">Contacto</a>
                 </div>
             </div>
         </div>
-
-
+    
         <a href="#" class="logo">Virtual Factory</a>
-
+    
         <div class="nav-right">
-            <a href="#whatis">¿De qué trata?</a>
-            <a href="#preview">Vista Previa</a>
-            <a href="#tutorial">Tutorial</a>
+            <a href="#whatis" class="desktop-item">¿De qué trata?</a>
+            <a href="#preview" class="desktop-item">Vista Previa</a>
+            <a href="#tutorial" class="desktop-item">Tutorial</a>
         </div>
     </nav>
+    <nav class="navbar1" id="sm-nav">
+        <div class="nav-left">
+            <div class="dropdown1">
+                <button class="dropbtn" onclick="toggleMenu()">☰ Menu</button>
+                <div class="dropdown-content" id="dropdownMenu">
+                    <a href="#aboutus">Sobre Nosotros</a>
+                    <a href="#collaborators">Colaboradores</a>
+                    <a href="#contact">Contacto</a>
+                </div>
+            </div>
+        </div>
+    
+        <a href="#" class="logo">Virtual Factory</a>
+    
+        <div class="nav-right">
+            <a href="#whatis" class="desktop-item">¿De qué trata?</a>
+            <a href="#preview" class="desktop-item">Vista Previa</a>
+            <a href="#tutorial" class="desktop-item">Tutorial</a>
+        </div>
+    </nav>
+    
 
 
     <section id="principal">
@@ -120,19 +137,18 @@
                 <h1>¿De qué trata?</h1>
                 <div class="flip-container">
                     <div class="front">
-                        <img src="images/whatis.jpg" alt="Imagen de entorno industrial">
+                        <img src="images/whatis.jpg" alt="Imagen de entorno industrial" class="img-fluid">
                     </div>
                     <div class="back">
-                        <p>Permitirá a los trabajadores explorar entornos industriales en un mundo virtual interactivo,
+                        <p class="fs-6 fs-md-3 fs-lg-2">Permitirá a los trabajadores explorar entornos industriales en un mundo virtual interactivo,
                             donde pueden visualizar piezas en 3D, comprender procesos complejos y entrenarse en el
-                            manejo de
-                            maquinaria sin riesgos.</p>
-                        <img src="images/pieza 3d.png" alt="">
-
+                            manejo de maquinaria sin riesgos.</p>
+                        <img src="images/pieza 3d.png" alt="" class="img-fluid">
                     </div>
                 </div>
             </div>
         </section>
+        
 
 
         <section id="preview">
@@ -141,42 +157,39 @@
             <div id="carouselExample" class="carousel slide">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="images/img1.jpg" class="d-block w-100" alt="image1">
+                        <img src="images/img1.jpg" class="d-block w-100 img-fluid" alt="image1">
                     </div>
                     <div class="carousel-item">
-                        <img src="images/img2.jpg" class="d-block w-100" alt="image2">
+                        <img src="images/img2.jpg" class="d-block w-100 img-fluid" alt="image2">
                     </div>
                     <div class="carousel-item">
-                        <img src="images/img3.jpg" class="d-block w-100" alt="image3">
+                        <img src="images/img3.jpg" class="d-block w-100 img-fluid" alt="image3">
                     </div>
                     <div class="carousel-item">
-                        <img src="images/img4.jpg" class="d-block w-100" alt="image4">
+                        <img src="images/img4.jpg" class="d-block w-100 img-fluid" alt="image4">
                     </div>
                     <div class="carousel-item">
-                        <video id="carouselVideo" class="d-block w-100" controls muted>
+                        <video id="carouselVideo" class="d-block w-100 img-fluid" controls muted>
                             <source src="videos/gameplay.mp4" type="video/mp4">
                             Tu navegador no soporta el elemento de video.
                         </video>
                     </div>
                 </div>
-
+        
                 <!-- Botón Anterior -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-                    data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-
+        
                 <!-- Botón Siguiente -->
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-                    data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-
         </section>
-
+        
         <section id="tutorial">
             <h1>Tutorial</h1>
             <p>A continuación, te mostramos un breve tutorial sobre cómo jugar y utilizar las funciones del juego.</p>
@@ -378,7 +391,6 @@
         <footer class="text-light pt-5 pb-4">
             <div class="container">
                 <div class="row text-center text-md-start">
-
                     <div class="col-md-3">
                         <h5 class="fw-bold">Navegación</h5>
                         <ul class="list-unstyled">
@@ -388,7 +400,7 @@
                             <li><a href="#preview" class="text-decoration-none footer-link">Vista Previa</a></li>
                         </ul>
                     </div>
-
+        
                     <div class="col-md-3">
                         <h5 class="fw-bold">Síguenos</h5>
                         <div class="d-flex justify-content-md-start justify-content-center gap-3">
@@ -402,44 +414,41 @@
                                     class="bi bi-linkedin"></i></a>
                         </div>
                     </div>
-
+        
                     <div class="col-md-3">
                         <h5 class="fw-bold">Información</h5>
                         <ul class="list-unstyled">
                             <li><a href="#" class="text-decoration-none footer-link">Términos de Uso</a></li>
-                            <li><a href="#" class="text-decoration-none footer-link">Política de
-                                    Privacidad</a>
-                            </li>
+                            <li><a href="#" class="text-decoration-none footer-link">Política de Privacidad</a></li>
                         </ul>
                     </div>
-
+        
                     <div class="col-md-3">
                         <h5 class="fw-bold">Ubicación</h5>
-                        <p class="mb-1"><img src="images/logo utc.png" alt="" width="20px"> Universidad Tecnológica de
-                            Coahuila</p>
+                        <p class="mb-1"><img src="images/logo utc.png" alt="" width="20px"> Universidad Tecnológica de Coahuila</p>
                         <p class="mb-1">Edificio II Tecnologías de la Información</p>
                         <p class="mb-1"><i class="bi bi-geo-alt"></i> Ramos Arizpe, México</p>
                         <a href="https://maps.app.goo.gl/5Zkd6AZ3omxkoYw96" target="_blank"
-                            class="text-decoration-none footer-link">
+                           class="text-decoration-none footer-link">
                             Ver en Google Maps
                         </a>
                     </div>
-
                 </div>
-
+        
                 <hr class="bg-light my-4">
-
+        
                 <div class="text-center mb-3">
                     <blockquote class="fst-italic text-light opacity-75">
                         "La tecnología es mejor cuando une a las personas."
                     </blockquote>
                 </div>
-
+        
                 <div class="text-center">
                     <p class="mb-0">&copy; 2025 Virtual Factory. Todos los derechos reservados.</p>
                 </div>
             </div>
         </footer>
+        
     </section>
     <script src="estilos.js"></script>
 
