@@ -408,13 +408,13 @@ section{
 }
 
 .name-client {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
 }
 
 .name-client span {
     display: block;
-    font-size: 12px;
+    font-size: 13px;
     color: #ddd;
 }
 
@@ -657,6 +657,9 @@ section{
 footer {
     background-color: rgba(19, 19, 19, 0.849);
     border-top: #c5c5c564 solid 1px;
+}
+footer a:hover {
+    color: #ffcc00;
 }
 #aboutus, #whatis, #tutorial, #preview, #collaborators {
     box-shadow: 4px 4px 18px rgba(108, 108, 108, 0.541);
