@@ -27,23 +27,23 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", function () {
         let currentScroll = window.scrollY;
 
-        // Desaparecer la barra al hacer scroll hacia abajo
         if (currentScroll > lastScrollTop) {
-            navbar.style.top = "-100px"; // Ajusta según el tamaño de tu barra
+
+            navbar.style.opacity = "0"; // Solo se hace invisible, pero sigue en su lugar
+            navbar.style.pointerEvents = "none"; // No bloquea clics
         } else {
-            navbar.style.top = "0"; // Restablecer la barra a su posición
+            // Mostrar nuevamente cuando se hace scroll arriba
+            navbar.style.opacity = "1";
+            navbar.style.pointerEvents = "auto";
             navbar.classList.add("scrolled");
         }
-
-        // Cuando la página esté en la parte superior, eliminar el fondo
         if (currentScroll === 0) {
+            // Si el scroll es 0 (en la parte superior de la página), quitar la clase "scrolled"
             navbar.classList.remove("scrolled");
         }
-
         lastScrollTop = currentScroll;
     });
 });
-
 
 function copyEmail(event) {
     event.preventDefault();

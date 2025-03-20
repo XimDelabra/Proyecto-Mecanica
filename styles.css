@@ -260,6 +260,14 @@ a:hover {
     background-color: rgba(0, 0, 0, 0.295); 
     transition: background-color 0.3s ease; 
 }
+@media (max-width: 768px) {
+    .nav-right 
+    {
+        display: none;
+        opacity: 0;
+    }
+    
+}
 
 
 
