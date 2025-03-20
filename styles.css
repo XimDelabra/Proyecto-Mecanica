@@ -1,11 +1,9 @@
-html,
-body {
+html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    
 }
-
 
 
 .video-fondo {
@@ -143,7 +141,7 @@ a:hover {
     }
 }
 
-.navbar1{
+.navbar1 {
     position: fixed;
     top: 0;
     left: 0;
@@ -154,9 +152,11 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
-    transition: top 0.3s;
+    transition: top 0.3s ease-in-out;
     box-sizing: border-box;
+    overflow: visible; /* Asegúrate de que no haya un overflow que lo bloquee */
 }
+
 
 .navbar1 .logo {
     position: absolute;
