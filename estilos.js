@@ -75,3 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
         aboutUsVideo.playbackRate = 0.7;
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("aboutus").classList.add("visible");
+});
